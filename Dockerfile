@@ -17,7 +17,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -o main main.go
 
 # 使用更小的运行时镜像
-FROM alpine:latest
+FROM alpine:3.19
 
 # 安装ca-certificates（用于HTTPS）
 RUN apk --no-cache add ca-certificates
